@@ -1,3 +1,4 @@
+require "mpeg/parser"
 require "mpeg/version"
 
 module Mpeg
