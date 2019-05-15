@@ -6,7 +6,11 @@ module Mpeg
     end
 
     def call(input)
-      @left.call(input) && @right.call(input)
+      input.transaction do |x|
+        result = @left.call(input) && @right.call(input)
+        x.commit! if result
+        result
+      end
     end
   end
 end

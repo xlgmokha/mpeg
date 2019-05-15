@@ -11,6 +11,7 @@ require "mpeg/repitition"
 require "mpeg/sequence"
 require "mpeg/slice"
 require "mpeg/str"
+require "mpeg/transaction"
 
 module Mpeg
   class Error < StandardError; end

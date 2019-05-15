@@ -14,8 +14,22 @@ module Mpeg
       Slice.new(position, slice)
     end
 
-    def end?
+    def rewind
+      transaction do |_|
+        yield
+      end
+    end
+
+    def transaction(&block)
+      Transaction.new(@scanner).run(&block)
+    end
+
+    def end_of_string?
       @scanner.eos?
+    end
+
+    def position
+      @scanner.pos
     end
   end
 end

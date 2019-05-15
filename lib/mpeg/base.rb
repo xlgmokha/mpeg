@@ -1,8 +1,7 @@
 module Mpeg
   class Base
-    def parse(string)
-      input = Input.new(string)
-      call(input) && input.end?
+    def parse(string, input: Input.new(string))
+      call(input) && input.end_of_string?
     end
 
     def repeat(min = 0, max = nil)
