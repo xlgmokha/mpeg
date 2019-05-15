@@ -14,5 +14,9 @@ module Mpeg
 
       Slice.new(position, slice)
     end
+
+    def end?
+      @scanner.eos?
+    end
   end
 end

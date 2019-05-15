@@ -7,7 +7,7 @@ module Mpeg
 
     def call(input)
       if input.matches?(@regex)
-        input.consume(1)
+        input.consume(@length)
         return true
       end
       false
