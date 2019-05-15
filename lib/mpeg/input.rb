@@ -11,7 +11,6 @@ module Mpeg
     def consume(characters)
       position = @scanner.pos
       slice = @scanner.scan(/(.|$){#{characters}}/m)
-
       Slice.new(position, slice)
     end
 
