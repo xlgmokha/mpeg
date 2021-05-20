@@ -1,6 +1,6 @@
 # Mpeg
 
-A mini parsing expression grammar inspired by parslet.
+A mini parsing expression grammar inspired by [parslet](https://github.com/kschiess/parslet).
 
 ## Installation
 
